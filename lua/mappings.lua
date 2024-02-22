@@ -20,6 +20,7 @@ vim.keymap.set({ 'v', 'n' }, '<Leader>op', '\"*p') -- Paste from OS clipboard af
 vim.keymap.set({ 'v', 'n' }, '<Leader>oP', '\"*P') -- Paste from OS clipboard before the cursor
 
 -- Vim clipboard mapping
+-- TODO Maybe add the same bindings but for OS clipboard?
 vim.keymap.set({ 'v' }, '<Leader>dp', '"_dp') -- Paste in visual mode without changing up the register after the cursor
 vim.keymap.set({ 'v' }, '<Leader>dP', '"_dP') -- Paste in visual mode without changing up the register before the cursor
 
@@ -29,7 +30,7 @@ vim.keymap.set({ 'n' }, '<Leader>so', ':nohlsearch<CR>')
 -- Panes and tabs mappings
 vim.keymap.set({ 'n' }, '<Leader>sv', ':vsplit<CR>') -- Open vertical split pane
 vim.keymap.set({ 'n' }, '<Leader>sh', ':split<CR>')  -- Open horizontal split pane
-vim.keymap.set({ 'n' }, '<Leader>t', ':tabe<CR>')    -- Open a new tav
+vim.keymap.set({ 'n' }, '<Leader>t', ':tabe<CR>')    -- Open a new tab
 
 -- Split panes navigation mappings
 vim.keymap.set({ 'n' }, '<Leader>j', '<C-w>j')
