@@ -1,15 +1,15 @@
-##### Plugins
+### Plugins
 
 Below is the list of plugins I might want to add 
 to my config after some consideration and testing.
 
-Mini.nvim plugins:
+#### Mini.nvim plugins:
 
 - mini.pairs
 - mini.surround
 - mini.comment
 
-Other plugins:
+#### Other plugins:
 
 - harpoon (Quickly access files you often use)
 - net-tree.nvim (Netrw replacement)
