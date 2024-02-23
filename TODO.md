@@ -19,5 +19,6 @@ to my config after some consideration and testing.
 - vim.illuminate (Highlight other words under the cursor)
 - dressing.nvim (Better Neovim UI)
 - nvim-web-devicons (Fancy icons)
+- conform.nvim (Better formatting for LSPs)
 - bufferline.nvim
 
