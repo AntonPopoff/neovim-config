@@ -1,23 +1,3 @@
--- Telescope config start
-
-local telescope = require('telescope')
-
--- Tweak some telescope default settings 
-telescope.setup({
-    defaults = {
-        -- Truncate files' path to always see a full file name
-        path_display = { 'truncate' },
-        -- Tweak horizontal (default) strategy just a little bit
-        layout_config = {
-            width = 0.85,
-            preview_width = 0.55
-        }
-    },
-})
-
--- Enable fzf extension to make telescope even faster
-telescope.load_extension('fzf')
-
 -- Telescope key bindings
 local telescope_builtin = require('telescope.builtin')
 vim.keymap.set('n', '<Leader>pf', telescope_builtin.find_files, {}) -- Search project files

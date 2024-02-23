@@ -3,11 +3,19 @@
 -- Map the leader key to "Space" before doing everything else
 vim.g.mapleader = ' '
 
+-- Bootstrap "Lazy" plugin manager and plugin configs
 require("lazybootstrap")
-require("telescope_config")
-require("treesitter_config")
+
+-- Load Neovim LSP config
 require("lsp_config")
-require("mappings")
+
+-- Load Neovim and plugin key mappings
+require("telescope_mappings")
+require("vim_mappings")
+
+-- Load Kanagawa color scheme
+-- Default palette is "Dragon"
+require("kanagawa").load()
 
 -- Some small tweaks
 vim.opt.scrolloff = 5

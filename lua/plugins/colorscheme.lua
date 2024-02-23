@@ -1,16 +1,12 @@
 return {
     'rebelot/kanagawa.nvim',
 
-    config = function()
-        -- Disable background color for numbers column
-        -- Copy pasted directly from the github page
-        require("kanagawa").setup({
-            compile = true,
-            colors = { theme = { all = { ui = { bg_gutter = "none" } } } }
-        })
-
-        -- Enabled color scheme after it was loaded 
-        vim.cmd.colorscheme('kanagawa-dragon')
-    end,
+    opts = {
+        theme = "dragon",    -- Set "Dragon" palette as a default for Kanagwa theme
+        background = "none", -- Disable background so "theme" attributes works
+        compile = true,
+        -- Disable background color for line numbers column
+        colors = { theme = { all = { ui = { bg_gutter = "none" } } } }
+    },
 }
 
