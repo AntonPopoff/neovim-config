@@ -1,6 +1,6 @@
 -- Neovim config start!
 
--- Map the leader key to "Space" before doing everything else
+-- Map the leader key to "Space"
 vim.g.mapleader = ' '
 
 -- Bootstrap "Lazy" plugin manager and plugin configs
@@ -9,13 +9,16 @@ require("lazybootstrap")
 -- Load Neovim LSP config
 require("lsp_config")
 
--- Load Neovim and plugin key mappings
-require("telescope_mappings")
-require("vim_mappings")
-
 -- Load Kanagawa color scheme
 -- Default palette is "Dragon"
 require("kanagawa").load()
+
+-- Load and configure Neovim Debugger Adapter Protocol
+require("dap_config")
+
+-- Load Neovim and plugin key mappings
+require("telescope_mappings")
+require("vim_mappings")
 
 -- Some small tweaks
 vim.opt.scrolloff = 5
