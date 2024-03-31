@@ -12,8 +12,6 @@ to my config after some consideration and testing.
 #### Other plugins:
 
 - harpoon (Quickly access files you often use)
-- Debugger Adapter Protocol
-- Debugger Adapter Protocol UI
 - net-tree.nvim (Netrw replacement)
 - nvim-tree.lua (Netrw replacement)
 - nvim-spectre (Search and Replace in multiple files) 
