@@ -7,16 +7,12 @@
 
 local dap = require('dap')
 
--- symlink to a local codelldb installation
-local codelldb_exec = 'codelldbx'
-local codelldb_port = 15000
-
 dap.adapters.codelldb = {
     type = 'server',
-    port = codelldb_port,
+    port = '15000',
     executable = {
-        command = codelldb_exec,
-        args = { "--port", codelldb_port },
+        command = 'codelldb', -- symlink to a local codelldb installation
+        args = { "--port", '15000' },
     }
 }
 
@@ -36,21 +32,54 @@ dap.configurations.rust = {
 dap.configurations.cpp = dap.configurations.rust
 dap.configurations.c = dap.configurations.rust
 
+dap.adapters.delve = {
+    type = 'server',
+    port = '15000',
+    executable = {
+        command = 'dlv',
+        args = { 'dap', '-l', '127.0.0.1:15000' },
+    }
+}
+
+dap.configurations.go = {
+    {
+        type = "delve",
+        name = "Debug",
+        request = "launch",
+        program = "${file}"
+    },
+    {
+        type = "delve",
+        name = "Debug test", -- configuration for debugging test files
+        request = "launch",
+        mode = "test",
+        program = "${file}"
+    },
+    -- works with go.mod packages and sub packages
+    {
+        type = "delve",
+        name = "Debug test (go.mod)",
+        request = "launch",
+        mode = "test",
+        program = "./${relativeFileDirname}"
+    }
+}
+
 local dapui = require('dapui')
 
 dapui.setup()
 
 dap.listeners.before.attach.dapui_config = function()
-  dapui.open()
+    dapui.open()
 end
 dap.listeners.before.launch.dapui_config = function()
-  dapui.open()
+    dapui.open()
 end
 dap.listeners.before.event_terminated.dapui_config = function()
-  dapui.close()
+    dapui.close()
 end
 dap.listeners.before.event_exited.dapui_config = function()
-  dapui.close()
+    dapui.close()
 end
 
 vim.keymap.set({ 'n' }, '<F5>', dap.continue)

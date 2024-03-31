@@ -1,5 +1,13 @@
 return {
+    -- Git Plugin
     'tpope/vim-fugitive',
-    'mbbill/undotree',
+
+    -- Undotree plugin and mappings
+    {
+        'mbbill/undotree',
+        keys = {
+            { '<Leader>ut', vim.cmd.UndotreeToggle },
+        },
+    },
 }
 

@@ -54,7 +54,3 @@ vim.keymap.set({ 'n' }, '<C-b>', '<C-b>zz')
 vim.keymap.set({ 'n' }, 'n', 'nzz')
 vim.keymap.set({ 'n' }, 'N', 'Nzz')
 
--- Plugin bindings start
-
--- Toggle UndoTree
-vim.keymap.set('n', '<Leader>ut', vim.cmd.UndotreeToggle)
