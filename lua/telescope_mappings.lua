@@ -6,4 +6,3 @@ vim.keymap.set('n', '<Leader>pb', telescope_builtin.buffers, {})    -- Search pr
 vim.keymap.set('n', '<Leader>pm', telescope_builtin.marks, {})      -- Search project marks
 vim.keymap.set('n', '<Leader>pr', telescope_builtin.registers, {})  -- Search registers content
 vim.keymap.set('n', '<Leader>ph', telescope_builtin.help_tags, {})  -- Search help tags
-
