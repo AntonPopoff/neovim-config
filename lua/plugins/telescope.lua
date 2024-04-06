@@ -6,6 +6,7 @@ return {
         tag = '0.1.5',
 
         config = function()
+            -- Tweak some telescope options
             local telescope = require("telescope")
 
             telescope.setup({
@@ -22,8 +23,18 @@ return {
                     },
                 },
             })
+
             -- Load C Fzf extension to make telescope even faster
             telescope.load_extension("fzf")
+
+            -- Add some telescope mappings
+            local telescope_builtin = require('telescope.builtin')
+            vim.keymap.set('n', '<Leader>pf', telescope_builtin.find_files, {}) -- Search project files
+            vim.keymap.set('n', '<Leader>pg', telescope_builtin.live_grep, {})  -- Rip grep project files
+            vim.keymap.set('n', '<Leader>pb', telescope_builtin.buffers, {})    -- Search project buffers
+            vim.keymap.set('n', '<Leader>pm', telescope_builtin.marks, {})      -- Search project marks
+            vim.keymap.set('n', '<Leader>pr', telescope_builtin.registers, {})  -- Search registers content
+            vim.keymap.set('n', '<Leader>ph', telescope_builtin.help_tags, {})  -- Search help tags
         end,
     },
     {
