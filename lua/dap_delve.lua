@@ -1,4 +1,5 @@
 local dap = require('dap')
+local dap_utils = require('dap.utils')
 
 dap.adapters.delve = {
     type = 'server',
@@ -18,12 +19,17 @@ dap.configurations.go = {
     },
     {
         type = "delve",
-        name = "Debug test", -- configuration for debugging test files
+        name = "Attach",
+        request = "attach",
+        processId = dap_utils.pick_process,
+    },
+    {
+        type = "delve",
+        name = "Debug test",
         request = "launch",
         mode = "test",
         program = "${file}"
     },
-    -- works with go.mod packages and sub packages
     {
         type = "delve",
         name = "Debug test (go.mod)",
