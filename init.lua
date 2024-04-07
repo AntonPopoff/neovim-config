@@ -16,8 +16,7 @@ require("kanagawa").load()
 -- Load and configure Neovim Debugger Adapter Protocol
 require("dap_config")
 
--- Load Neovim and plugin key mappings
-require("telescope_mappings")
+-- Load Neovim mappings
 require("vim_mappings")
 
 -- Some small tweaks

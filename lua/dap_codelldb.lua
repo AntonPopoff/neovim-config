@@ -1,15 +1,16 @@
 local dap = require('dap')
+local codelldb_port = 15000
 
 dap.adapters.codelldb = {
     type = 'server',
-    port = '15000',
+    port = codelldb_port,
     executable = {
         command = 'codelldb', -- symlink to a local codelldb installation
-        args = { "--port", '15000' },
+        args = { "--port", codelldb_port },
     }
 }
 
-dap.configurations.rust = {
+dap.configurations.c = {
     {
         name = "Launch file",
         type = "codelldb",
@@ -22,6 +23,4 @@ dap.configurations.rust = {
     },
 }
 
--- Use the same CodeLLDB config for C and C++ as well
-dap.configurations.c = dap.configurations.rust
-dap.configurations.cpp = dap.configurations.rust
+dap.configurations.cpp = dap.configurations.c
