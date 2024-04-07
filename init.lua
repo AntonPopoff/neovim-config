@@ -14,7 +14,7 @@ require("lsp_config")
 require("kanagawa").load()
 
 -- Load and configure Neovim Debugger Adapter Protocol
-require("dap_config")
+require('dap_codelldb')
 
 -- Load Neovim mappings
 require("vim_mappings")

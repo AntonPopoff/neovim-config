@@ -1,3 +1,6 @@
+-- Setup C and CPP debugging configurations with Neovim DAP and CodeLLDB
+-- Rust configuration is managed by rustaceanvim plugin
+
 local dap = require('dap')
 local codelldb_port = 15000
 
