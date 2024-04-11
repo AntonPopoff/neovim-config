@@ -1,6 +1,5 @@
 -- LSP Zero setup
 
--- Initialize LSP Zero itself
 local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(_, bufnr)
@@ -9,7 +8,6 @@ lsp_zero.on_attach(function(_, bufnr)
     lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
--- Setup Mason with LSP Zero
 require('mason').setup({})
 
 require('mason-lspconfig').setup({

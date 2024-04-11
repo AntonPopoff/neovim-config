@@ -1,5 +1,5 @@
 return {
-    "nvim-neotest/nvim-nio",
+    'nvim-neotest/nvim-nio',
     {
         'mfussenegger/nvim-dap',
         config = function()
@@ -34,7 +34,7 @@ return {
         },
     },
     {
-        "rcarriga/nvim-dap-ui",
+        'rcarriga/nvim-dap-ui',
         lazy = true,
     },
     {

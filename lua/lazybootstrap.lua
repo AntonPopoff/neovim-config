@@ -1,5 +1,4 @@
--- Script we use to bootstrap Lazy plugin manager
--- Copy and pasted directly from the github page
+-- Lazy bootstrap script
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 
