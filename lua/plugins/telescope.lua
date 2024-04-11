@@ -21,12 +21,12 @@ return {
             telescope.load_extension("fzf")
         end,
         keys = {
-            { '<Leader>pf', '<cmd>Telescope find_files<cr>' }, -- Search project files
-            { '<Leader>pg', '<cmd>Telescope live_grep<cr>' },  -- Rip grep project files
-            { '<Leader>pb', '<cmd>Telescope buffers<cr>' },    -- Search project buffers
-            { '<Leader>pm', '<cmd>Telescope marks<cr>' },      -- Search project marks
-            { '<Leader>pr', '<cmd>Telescope registers<cr>' },  -- Search registers content
-            { '<Leader>ph', '<cmd>Telescope help_tags<cr>' },  -- Search help tags
+            { '<Leader>pf', '<cmd>Telescope find_files<cr>', mode = 'n' },
+            { '<Leader>pg', '<cmd>Telescope live_grep<cr>',  mode = 'n' },
+            { '<Leader>pb', '<cmd>Telescope buffers<cr>',    mode = 'n' },
+            { '<Leader>pm', '<cmd>Telescope marks<cr>',      mode = 'n' },
+            { '<Leader>pr', '<cmd>Telescope registers<cr>',  mode = 'n' },
+            { '<Leader>ph', '<cmd>Telescope help_tags<cr>',  mode = 'n' },
         }
     },
     {

@@ -1,6 +1,3 @@
--- Setup C and CPP debugging configurations with Neovim DAP and CodeLLDB
--- Rust configuration is managed by rustaceanvim plugin
-
 local dap = require('dap')
 local codelldb_port = 15000
 
@@ -9,15 +6,15 @@ dap.adapters.codelldb = {
     port = codelldb_port,
     executable = {
         command = 'codelldb', -- symlink to a local codelldb installation
-        args = { "--port", codelldb_port },
+        args = { '--port', codelldb_port },
     }
 }
 
 dap.configurations.c = {
     {
-        name = "Launch file",
-        type = "codelldb",
-        request = "launch",
+        name = 'Launch file',
+        type = 'codelldb',
+        request = 'launch',
         program = function()
             return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
         end,
