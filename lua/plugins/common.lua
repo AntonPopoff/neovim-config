@@ -1,8 +1,8 @@
 return {
-    -- Git Plugin
-    'tpope/vim-fugitive',
-
-    -- Undotree plugin and mappings
+    {
+        'tpope/vim-fugitive',
+        cmd = { 'Git', 'G' },
+    },
     {
         'mbbill/undotree',
         keys = {
@@ -11,7 +11,7 @@ return {
     },
     {
         'mrcjkb/rustaceanvim',
-        version = '^4', -- Recommended
+        version = '^4',
         ft = { 'rust' },
     }
 }
