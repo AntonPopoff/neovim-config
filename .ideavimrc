@@ -1,0 +1,63 @@
+syntax on		" Highlight syntax
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+set wildmenu		" display completion matches in a status line
+set number
+set relativenumber	" display relative line numbers
+set scrolloff=5		" keep at least 5 lines above and below the cursor
+set history=200		" keep 200 lines of command line history
+set laststatus=2	" display the status line at the bottom
+set ignorecase		" ignore case during search operations
+set encoding=utf-8	" set vim-wide UTF-8 encoding
+set cursorline		" Highlight the current line
+set incsearch		" Do incremental searching
+set hlsearch		" Highlight search result
+
+" Tabs and indentation settings
+set expandtab 		" use space characters instead of tabs
+set softtabstop=4	" insert 4 spaces when tab button pressed
+set shiftwidth=4	" use 4 spaces for indentation
+
+" Map the leader key
+nnoremap <Space> <nop>
+let mapleader=" "
+
+" OS clipboard mappings
+noremap <Leader>oy "+y 
+vnoremap <Leader>oy "+y
+nnoremap <Leader>oyy "+yy
+nnoremap <Leader>op "+p
+vnoremap <Leader>p "_dp
+
+" Disable the arrow keys just in case
+noremap <Left> <nop>
+noremap <Right> <nop>
+noremap <Up> <nop>
+noremap <Down> <nop>
+
+noremap <Leader>q :q<CR>
+
+" Disable search highlighting temporary when <Esc> is hit
+nnoremap <silent> <Leader>so :nohlsearch<CR>
+
+" Map idea actions to vim key map
+nmap <C-c> <Action>(EditorEscape)
+nmap <Leader>pf <Action>(SearchEverywhere)
+nmap <Leader>pg <Action>(FindInPath)
+
+nmap <F3> <Action>(ShowReformatFileDialog)
+xmap <F3> <Action>(ShowReformatFileDialog)
+
+nmap <F5> <Action>(Debug)
+nmap <S-F5> <Action>(Stop)
+nmap <F6> <Action>(Resume)
+
+nmap <Leader>b <Action>(ToggleLineBreakpoint)
+nmap <Leader>c <Action>(AddConditionalBreakpoint)
+
+nmap n nzz
+nmap N Nzz
+
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+
