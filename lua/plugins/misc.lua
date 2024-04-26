@@ -9,9 +9,4 @@ return {
             { '<Leader>ut', vim.cmd.UndotreeToggle, mode = 'n' },
         },
     },
-    {
-        'mrcjkb/rustaceanvim',
-        version = '^4',
-        ft = { 'rust' },
-    },
 }
