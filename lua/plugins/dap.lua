@@ -1,7 +1,8 @@
 return {
-    'nvim-neotest/nvim-nio',
     {
         'mfussenegger/nvim-dap',
+        lazy = true,
+        dependencies = { 'nvim-neotest/nvim-nio' },
         config = function()
             local dap = require('dap')
             vim.keymap.set({ 'n' }, '<S-F5>', dap.terminate)
@@ -9,8 +10,8 @@ return {
             vim.keymap.set({ 'n' }, '<F7>', dap.step_into)
             vim.keymap.set({ 'n' }, '<S-F7>', dap.step_out)
             vim.keymap.set({ 'n' }, '<Leader>b', dap.toggle_breakpoint)
+            vim.keymap.set({ 'n' }, '<F5>', dap.continue)
 
-            -- Hook into DAP events to automatically show and hide DAP UI
             local dapui = require('dapui')
 
             dapui.setup()
@@ -28,18 +29,9 @@ return {
                 dapui.close()
             end
         end,
-        keys = {
-            { '<F5>', vim.cmd.DapContinue, mode = 'n' },
-            { '<F6>', vim.cmd.DapContinue, mode = 'n' },
-        },
     },
     {
         'rcarriga/nvim-dap-ui',
         lazy = true,
-    },
-    {
-        'leoluz/nvim-dap-go',
-        config = function() require('dap-go').setup() end,
-        ft = { 'go' },
     },
 }
