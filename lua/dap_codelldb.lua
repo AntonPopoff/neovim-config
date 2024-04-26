@@ -1,12 +1,11 @@
 local dap = require('dap')
-local codelldb_port = 15000
 
 dap.adapters.codelldb = {
     type = 'server',
-    port = codelldb_port,
+    port = '${port}',
     executable = {
         command = 'codelldb', -- symlink to a local codelldb installation
-        args = { '--port', codelldb_port },
+        args = { '--port', '${port}' },
     }
 }
 
@@ -24,3 +23,4 @@ dap.configurations.c = {
 }
 
 dap.configurations.cpp = dap.configurations.c
+dap.configurations.rust = dap.configurations.c
