@@ -10,9 +10,6 @@ vim.keymap.set({ 'n', 'i', 'v' }, '<Up>', '<Nop>')
 vim.keymap.set({ 'n', 'i', 'v' }, '<Left>', '<Nop>')
 vim.keymap.set({ 'n', 'i', 'v' }, '<Right>', '<Nop>')
 
--- Open Neovim Netrw file explorer
-vim.keymap.set('n', '<Leader>e', ':Explore<CR>')
-
 -- OS clipboard mappings
 vim.keymap.set({ 'v', 'n' }, '<Leader>oy', '\"*y') -- Copy to OS clipboard in visual mode
 vim.keymap.set({ 'n' }, '<Leader>oyy', '\"*yy')    -- Copy to OS clipboard an entire line in normal mode
