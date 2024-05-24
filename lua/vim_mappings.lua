@@ -33,7 +33,13 @@ vim.keymap.set({ 'n' }, '<Leader>k', '<C-w>k')
 vim.keymap.set({ 'n' }, '<Leader>h', '<C-w>h')
 vim.keymap.set({ 'n' }, '<Leader>l', '<C-w>l')
 vim.keymap.set({ 'n' }, '<Leader>r', '<C-w>r')
+
+-- Resize panes mappings
 vim.keymap.set({ 'n' }, '<Leader>=', '<C-w>=')
+vim.keymap.set({ 'n' }, '<M-=>', '3<C-w>+')
+vim.keymap.set({ 'n' }, '<M-->', '3<C-w>-')
+vim.keymap.set({ 'n' }, '<M-,>', '2<C-w><')
+vim.keymap.set({ 'n' }, '<M-.>', '2<C-w>>')
 
 -- Close current window with
 vim.keymap.set({ 'n' }, '<Leader>q', ':x<CR>')
