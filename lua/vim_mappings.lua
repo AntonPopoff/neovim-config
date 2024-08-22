@@ -41,9 +41,6 @@ vim.keymap.set({ 'n' }, '<M-->', '3<C-w>-')
 vim.keymap.set({ 'n' }, '<M-,>', '2<C-w><')
 vim.keymap.set({ 'n' }, '<M-.>', '2<C-w>>')
 
--- Close current window with
-vim.keymap.set({ 'n' }, '<Leader>q', ':x<CR>')
-
 -- Map CTRL+c to Escape
 vim.keymap.set({ 'n', 'i', 'v' }, '<C-c>', '<Esc>')
 
