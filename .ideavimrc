@@ -22,11 +22,15 @@ set shiftwidth=4	" use 4 spaces for indentation
 nnoremap <Space> <nop>
 let mapleader=" "
 
-" OS clipboard mappings
-noremap <Leader>oy "+y 
+" OS clipboard yank mappings
+vnoremap <Leader>oy "+y 
 vnoremap <Leader>oy "+y
 nnoremap <Leader>oyy "+yy
-nnoremap <Leader>op "+p
+
+" OS clipboard paste mappings
+noremap <Leader>op "+p
+
+" Delete to void register and paste
 vnoremap <Leader>p "_dp
 
 " Disable the arrow keys just in case
@@ -35,10 +39,16 @@ noremap <Right> <nop>
 noremap <Up> <nop>
 noremap <Down> <nop>
 
-noremap <Leader>q :q<CR>
-
 " Disable search highlighting temporary when <Esc> is hit
 nnoremap <silent> <Leader>so :nohlsearch<CR>
+
+" Center cursor when searching
+nmap n nzz
+nmap N Nzz
+
+" Center cursor when scrolling text
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
 
 " Map idea actions to vim key map
 nmap <C-c> <Action>(EditorEscape)
@@ -54,10 +64,3 @@ nmap <F6> <Action>(Resume)
 
 nmap <Leader>b <Action>(ToggleLineBreakpoint)
 nmap <Leader>c <Action>(AddConditionalBreakpoint)
-
-nmap n nzz
-nmap N Nzz
-
-nmap <C-d> <C-d>zz
-nmap <C-u> <C-u>zz
-
